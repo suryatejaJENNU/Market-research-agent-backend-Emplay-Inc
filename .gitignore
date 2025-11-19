@@ -1,0 +1,56 @@
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual Environment
+venv/
+env/
+
+# Environment Variables
+.env
+.env.local
+.env.*
+
+# VS Code
+.vscode/
+
+# Bytecode
+*.pyc
+*.pyo
+*.pyd
+
+# Mac / Windows System Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Uvicorn reload cache
+*.pid
+
+# Build / Packaging
+build/
+dist/
+*.egg-info/
+
+# PyInstaller
+*.spec
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# IDE folders
+.idea/
+*.iml
+
+# Render Specific
+.render/
