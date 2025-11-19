@@ -31,7 +31,7 @@ The agent performs the following workflow step-by-step:
 
 ##  Folder Structure
 
-
+```text
 market-research-agent/
 │
 ├── main.py                  # Application entry point
@@ -42,9 +42,10 @@ market-research-agent/
 ├── test_agent.py            # Script to test the agent locally
 ├── requirements.txt         # Python dependencies
 └── .env                     # Environment variables
-
+```
 
 ## Tech Used
+```text
 FastAPI (Web Framework)
 
 Uvicorn (ASGI Server)
@@ -72,10 +73,10 @@ venv\Scripts\activate
 (For macOS/Linux: source venv/bin/activate)
 
 3. **Install Dependencies**
-
-
 pip install -r requirements.txt
-4. **Create .env File**
+
+
+5. **Create .env File**
 Create a file named .env in the root directory and add the following keys:
 GEMINI_API_KEY=your_key
 GOOGLE_API_KEY=your_key
@@ -111,9 +112,9 @@ news
 sentiment
 
 final_report
-
+```
 ## Environment Variables Guide
-
+```text
 **Variable,Purpose**
 GEMINI_API_KEY,"Used for generating keywords, checking sentiment, and writing summaries."
 SERPAPI_KEY,Used for discovering companies based on keywords.
@@ -130,15 +131,17 @@ uvicorn main:app --host 0.0.0.0 --port $PORT
 
 Environment Variables: Add your keys (GEMINI_API_KEY, etc.) in the Render Dashboard under the "Environment" tab.
 
-
+```
 ## Testing
 To test the agent logic without running the full server, run the test script:
 python test_agent.py
 
 
 ## Extra Notes
+```text
 CORS: Enabled to allow connections from a React frontend.
 
 Quotas: If the Gemini API quota is exceeded, some parts of the response may indicate "unavailable".
 
 Fallbacks: The system is designed to work even without SerpAPI or NewsAPI keys by providing mock data.
+```
