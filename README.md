@@ -76,7 +76,7 @@ venv\Scripts\activate
 pip install -r requirements.txt
 
 
-5. **Create .env File**
+4. **Create .env File**
 Create a file named .env in the root directory and add the following keys:
 GEMINI_API_KEY=your_key
 GOOGLE_API_KEY=your_key
@@ -90,7 +90,10 @@ Optional: SERPAPI_KEY and NEWS_API_KEY. If missing, the backend uses fallback da
 5. **Start the Server**
 uvicorn main:app --reload
 
+```
+
 ## API Documentation
+
 Generate Research Report
 Endpoint: /api/research
 
