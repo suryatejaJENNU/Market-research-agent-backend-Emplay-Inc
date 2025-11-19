@@ -11,7 +11,7 @@ The backend is currently deployed on Render:
 
 **Main Endpoint:** `POST /api/research`
 
----
+
 
 ##  What This Project Does
 
@@ -31,7 +31,7 @@ The agent performs the following workflow step-by-step:
 
 ##  Folder Structure
 
-```text
+
 market-research-agent/
 │
 ├── main.py                  # Application entry point
@@ -44,7 +44,6 @@ market-research-agent/
 ├── requirements.txt         # Python dependencies
 └── .env                     # Environment variables 
 ---
-
 
 ## Tech Used
 FastAPI (Web Framework)
@@ -111,7 +110,7 @@ The agent performs the following workflow step-by-step:
 
 ##  Folder Structure
 
-```text
+
 market-research-agent/
 │
 ├── main.py                  # Application entry point
@@ -124,7 +123,7 @@ market-research-agent/
 └── .env                     # Environment variables
 
 
-Tech Used
+## Tech Used
 FastAPI (Web Framework)
 
 Uvicorn (ASGI Server)
@@ -139,7 +138,7 @@ Python 3.10
 
 Dotenv
 
-⚙️ How To Run This Project Locally
+## How To Run This Project Locally
 Follow these steps to set up the project on your machine:
 
 1. Create a Virtual Environment
@@ -211,12 +210,12 @@ uvicorn main:app --host 0.0.0.0 --port $PORT
 Environment Variables: Add your keys (GEMINI_API_KEY, etc.) in the Render Dashboard under the "Environment" tab.
 
 
-Testing
+## Testing
 To test the agent logic without running the full server, run the test script:
 python test_agent.py
 
 
-Extra Notes
+## Extra Notes
 CORS: Enabled to allow connections from a React frontend.
 
 Quotas: If the Gemini API quota is exceeded, some parts of the response may indicate "unavailable".
