@@ -62,20 +62,20 @@ Dotenv
 ## How To Run This Project Locally
 Follow these steps to set up the project on your machine:
 
-1. Create a Virtual Environment
+1. **Create a Virtual Environment**
 
 python -m venv venv
-2. Activate the Environment (Windows)
+2. **Activate the Environment (Windows)**
 
 
 venv\Scripts\activate
 (For macOS/Linux: source venv/bin/activate)
 
-3. Install Dependencies
+3. **Install Dependencies**
 
 
 pip install -r requirements.txt
-4. Create .env File
+4. **Create .env File**
 Create a file named .env in the root directory and add the following keys:
 GEMINI_API_KEY=your_key
 GOOGLE_API_KEY=your_key
@@ -86,21 +86,21 @@ Required: GEMINI_API_KEY (and GOOGLE_API_KEY if your code uses that variable nam
 
 Optional: SERPAPI_KEY and NEWS_API_KEY. If missing, the backend uses fallback data.
 
-5. Start the Server
+5. **Start the Server**
 uvicorn main:app --reload
 
-API Documentation
+## API Documentation
 Generate Research Report
 Endpoint: /api/research
 
-Method: POST
+**Method: POST**
 
-Request Body Example:
+**Request Body Example:
 {
   "brief": "Find top AI telecom companies"
-}
+}**
 
-Response: The response includes a structured JSON object containing:
+**Response: The response includes a structured JSON object containing:**
 
 keywords
 
@@ -114,18 +114,18 @@ final_report
 
 ## Environment Variables Guide
 
-Variable,Purpose
+**Variable,Purpose**
 GEMINI_API_KEY,"Used for generating keywords, checking sentiment, and writing summaries."
 SERPAPI_KEY,Used for discovering companies based on keywords.
 NEWS_API_KEY,Used for fetching real-time news.
 
-Deploying on Render
+**Deploying on Render**
 If you are deploying this project to Render, use the following settings:
 
-Build Command:
+**Build Command:**
 pip install -r requirements.txt
 
-Start Command:
+**Start Command:**
 uvicorn main:app --host 0.0.0.0 --port $PORT
 
 Environment Variables: Add your keys (GEMINI_API_KEY, etc.) in the Render Dashboard under the "Environment" tab.
